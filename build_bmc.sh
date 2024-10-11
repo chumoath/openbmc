@@ -1,8 +1,14 @@
-#!/bin/sh
+#!/bin/bash
+
+# ./build_bmc.sh  |   no: sh build_bmc.sh
 
 mv build/qemuarm64.bmc build/qemuarm64
 
 . setup qemuarm64
+
+rm -rf downloads
+
+ln -s ~/downloads downloads
 
 bitbake rust-llvm-native
 bitbake rust-native
