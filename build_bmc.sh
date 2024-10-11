@@ -2,6 +2,8 @@
 
 mv build/qemuarm64.bmc build/qemuarm64
 
+. setup qemuarm64
+
 bitbake rust-llvm-native
 bitbake rust-native
 bitbake bmcweb
