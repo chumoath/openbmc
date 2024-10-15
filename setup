@@ -60,13 +60,14 @@ machine() {
             # This is a QEMU machine, use phosphor defaults.
             tmpl="meta-phosphor/conf"
         else
+            tmpl="meta-phosphor/conf"
             # Skip any machines that don't support meta-phosphor.
-            if [ ! -e "$tmpl/templates/default/bblayers.conf.sample" ]; then
-                continue
-            fi
-            if ! grep -q "##OEROOT##/meta-phosphor" "$tmpl/templates/default/bblayers.conf.sample"; then
-                continue
-            fi
+            #if [ ! -e "$tmpl/templates/default/bblayers.conf.sample" ]; then
+            #    continue
+            #fi
+            #if ! grep -q "##OEROOT##/meta-phosphor" "$tmpl/templates/default/bblayers.conf.sample"; then
+            #    continue
+            #fi
         fi
 
         # If a target is specified, then check for a match,
