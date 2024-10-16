@@ -20,8 +20,6 @@ rm -rf downloads
 ln -s ~/downloads downloads
 
 
-# cp -fa conf/imx6ull-alientek-emmc.dts  tmp/work-shared/imx6ullevk/kernel-source/arch/arm/boot/dts/nxp/imx
-
 bitbake rust-llvm-native
 bitbake bmcweb
 bitbake webui-vue
