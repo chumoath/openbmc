@@ -1,0 +1,29 @@
+From c18d2ff91c04cd3631e4fcebd1003cf4cadcca50 Mon Sep 17 00:00:00 2001
+From: chumoath <chumoath.guo@gmail.com>
+Date: Tue, 29 Oct 2024 21:36:58 +0800
+Subject: [PATCH] =?UTF-8?q?dbus=E6=B7=BB=E5=8A=A0auth-anonymous?=
+Upstream-Status: Pending
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ bus/system.conf.in | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/bus/system.conf.in b/bus/system.conf.in
+index d2f3244..b69c70a 100644
+--- a/bus/system.conf.in
++++ b/bus/system.conf.in
+@@ -33,6 +33,8 @@
+   <syslog/>
+ 
+   <!-- Only allow socket-credentials-based authentication -->
++  <auth>ANONYMOUS</auth>
++  <allow_anonymous/>
+   <auth>EXTERNAL</auth>
+ 
+   <!-- Only listen on a local socket. (abstract=/path/to/socket 
+-- 
+2.34.1
+
