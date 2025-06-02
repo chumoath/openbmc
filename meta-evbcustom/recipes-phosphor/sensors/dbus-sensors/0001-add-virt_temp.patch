@@ -1,0 +1,21 @@
+From 1f34db701d3f01552e96c7a61b8f92f0afbbff35 Mon Sep 17 00:00:00 2001
+From: chumoath <chumoath.guo@gail.com>
+Date: Mon, 2 Jun 2025 14:02:47 +0800
+Subject: [PATCH] add virt_temp.
+
+---
+ src/HwmonTempMain.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/HwmonTempMain.cpp b/src/HwmonTempMain.cpp
+index f7ccb4f..f85ea72 100644
+--- a/src/HwmonTempMain.cpp
++++ b/src/HwmonTempMain.cpp
+@@ -74,6 +74,7 @@ static const I2CDeviceTypeMap sensorTypes{
+     {"HDC1080", I2CDeviceType{"hdc1080", false}},
+     {"JC42", I2CDeviceType{"jc42", true}},
+     {"LM75A", I2CDeviceType{"lm75a", true}},
++    {"VIRT_TEMP", I2CDeviceType{"virt_temp", true}},
+     {"LM95234", I2CDeviceType{"lm95234", true}},
+     {"MAX31725", I2CDeviceType{"max31725", true}},
+     {"MAX31730", I2CDeviceType{"max31730", true}},
